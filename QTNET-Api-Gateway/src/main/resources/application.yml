@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: Api-Gateway-Feign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        port: 11000
+        dashboard: localhost:8899
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/qtnet?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: qtnet
+    password: qtnet
+
+server:
+  port: 10000
+
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

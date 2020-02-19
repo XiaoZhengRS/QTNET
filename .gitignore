@@ -1,0 +1,5 @@
+# Project exclude paths
+/QTNET-Api-Gateway/target/
+/QTNET-Static-Entitys/target/
+/QTNET-Static-Utils/target/
+/QTNET-User-Provider/target/

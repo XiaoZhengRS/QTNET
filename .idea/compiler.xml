@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="QTNET-User-Provider" />
+        <module name="QTNET-Static-Entitys" />
+        <module name="QTNET-Static-Utils" />
+        <module name="QTNET-Api-Gateway" />
+        <module name="QTNET-Redis-Provider-05" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="QTNET-Api-Gateway" options="-parameters" />
+      <module name="QTNET-Redis-Provider-05" options="-parameters" />
+      <module name="QTNET-Static-Entitys" options="-parameters" />
+      <module name="QTNET-Static-Utils" options="-parameters" />
+      <module name="QTNET-User-Provider" options="-parameters" />
+    </option>
+  </component>
+</project>
