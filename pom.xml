@@ -11,8 +11,10 @@
         <module>QTNET-User-Provider</module>
         <module>QTNET-Static-Entitys</module>
         <module>QTNET-Redis-Provider-05</module>
+        <module>QTNET-Redis-Provider-06</module>
         <module>QTNET-Static-Utils</module>
         <module>QTNET-Api-Gateway</module>
+        <module>QTNET-System-Provider</module>
     </modules>
     <packaging>pom</packaging>
 

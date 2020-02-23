@@ -6,20 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="QTNET-Static-Utils" />
+        <module name="QTNET-System-Provider" />
         <module name="QTNET-User-Provider" />
         <module name="QTNET-Static-Entitys" />
-        <module name="QTNET-Static-Utils" />
         <module name="QTNET-Api-Gateway" />
+      </profile>
+      <profile name="Annotation profile for QTNET" enabled="true">
+        <sourceOutputDir name="../QTNET-Redis-Provider-06/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../QTNET-Redis-Provider-06/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="QTNET-Redis-Provider-05" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="QTNET-Redis-Provider-05 (1)" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="QTNET-Api-Gateway" options="-parameters" />
       <module name="QTNET-Redis-Provider-05" options="-parameters" />
+      <module name="QTNET-Redis-Provider-05 (1)" options="-parameters" />
       <module name="QTNET-Static-Entitys" options="-parameters" />
       <module name="QTNET-Static-Utils" options="-parameters" />
+      <module name="QTNET-System-Provider" options="-parameters" />
       <module name="QTNET-User-Provider" options="-parameters" />
     </option>
   </component>

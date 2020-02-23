@@ -51,7 +51,11 @@ public class UserApi {
         userPoJo.setUsername(username);
         userPoJo.setPassword(password);
         userPoJo.setUuid(UUID.randomUUID().toString());
-        return new ResponseBean(200, "处理完成!", userService.regUser(userPoJo));
+        if (userService.regUser(userPoJo)){
+            return new ResponseBean(200, "处理完成!", "注册成功!");
+        }else {
+            return new ResponseBean(412, "注册失败!", "注册失败!");
+        }
     }
 
     @PostMapping("/register/getUser")

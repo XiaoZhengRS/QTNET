@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLIntegrityConstraintViolationException;
+
 @SuppressWarnings("ALL")
 @Slf4j
 @Service
@@ -29,10 +31,15 @@ public class UserService {
      * 用户注册
      */
     public Boolean regUser(UserPoJo userPoJo) {
-        if (userDao.insert(userPoJo) < 1) {
+        try {
+            if (userDao.insert(userPoJo) < 1) {
+                return false;
+            }else {
+                return true;
+            }
+        }catch (Exception e){
             return false;
         }
-        return true;
     }
 
     /**
@@ -42,6 +49,9 @@ public class UserService {
         QueryWrapper<UserPoJo> queryWrapperUser = new QueryWrapper<UserPoJo>();
         queryWrapperUser.eq("username", username);
         UserPoJo userPoJo = userDao.selectOne(queryWrapperUser);
+        if(userPoJo == null){
+            return null;
+        }
         QueryWrapper<RolePoJo> queryWrapperRole = new QueryWrapper<RolePoJo>();
         queryWrapperRole.eq("rid", userPoJo.getRid());
         userPoJo.setRole(roleDao.selectOne(queryWrapperRole));

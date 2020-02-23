@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: system-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/qtnet?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: qtnet
+    password: qtnet
+
+server:
+  port: 41000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

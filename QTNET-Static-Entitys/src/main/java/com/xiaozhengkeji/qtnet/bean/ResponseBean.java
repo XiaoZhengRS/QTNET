@@ -1,8 +1,12 @@
 package com.xiaozhengkeji.qtnet.bean;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 @Data
+@NoArgsConstructor
+@Accessors(chain = true)
 public class ResponseBean {
     //Http状态码
     private int code;

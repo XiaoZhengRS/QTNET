@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>QTNET-Redis-Provider-05</artifactId>
+    <artifactId>QTNET-System-Provider</artifactId>
 
     <dependencies>
         <!-- 项目类 -->
@@ -60,8 +60,8 @@
             <version>8.0.13</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
     </dependencies>
@@ -72,7 +72,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.xiaozhengkeji.qtnet.RedisProvider05</mainClass>
+                    <mainClass>com.xiaozhengkeji.qtnet.SystemProvider</mainClass>
                 </configuration>
             </plugin>
         </plugins>
